@@ -1,4 +1,4 @@
-## tags: [cours, git, github, gitlab, versionning] aliases: [Git, GIT, Cours Git]
+## title: Versionning Git tags: [cours, git, github, gitlab, versionning] aliases: [Git, GIT, Cours Git]
 
 # 🌳 GIT
 
@@ -261,7 +261,11 @@ working directory → (git add) → staging area (index) → (git commit) → gi
 
 ---
 
-## 🔗 Liens
+## 🔗 Related
 
-- [Histoire de Github](Histoire%20de%20Github.md)
-- #git #github #gitlab
+- [Index GitHub](Index%20GitHub.md) — Index du dossier GitHub
+- [Cours Git & GitHub](Cours%20Git%20%26%20GitHub.md) — Cours complet sur Git et GitHub
+- [Histoire de GitHub](Histoire%20de%20Github.md) — Historique de la plateforme
+- [Index principal](../INDEX.md) — Table des matières générale du vault
+
+#git #github #gitlab

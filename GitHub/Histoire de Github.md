@@ -1,4 +1,4 @@
-## tags: [cours, histoire, git, github] aliases: [GitHub, Histoire GitHub]
+## title: Histoire de GitHub tags: [cours, histoire, git, github] aliases: [GitHub, Histoire GitHub]
 
 # Histoire de GitHub
 
@@ -73,6 +73,11 @@
 
 ---
 
-## Liens
+## 🔗 Related
 
-- #git #github #histoire
+- [Index GitHub](Index%20GitHub.md) — Index du dossier GitHub
+- [Cours Git & GitHub](Cours%20Git%20%26%20GitHub.md) — Cours complet sur Git et GitHub
+- [Versionning Git](Versionning%20Github.md) — Résumé synthétique des concepts
+- [Index principal](../INDEX.md) — Table des matières générale du vault
+
+#git #github #histoire

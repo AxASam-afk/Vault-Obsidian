@@ -4,18 +4,18 @@
 
 > [!abstract] Plan du cours
 > 
-> 1. [1. Pourquoi versionner son code ?](#1.%20Pourquoi%20versionner%20son%20code%20%3F)
-> 2. [2. Théorie : les concepts de Git](#2.%20Th%C3%A9orie%20%3A%20les%20concepts%20de%20Git)
-> 3. [3. Installation et configuration](#3.%20Installation%20et%20configuration)
-> 4. [4. Les commandes de base](#4.%20Les%20commandes%20de%20base)
-> 5. [5. Les branches](#5.%20Les%20branches)
-> 6. [6. Fusionner : merge, rebase, cherry-pick](#6.%20Fusionner%20%3A%20merge%2C%20rebase%2C%20cherry-pick)
-> 7. [7. Dépôts distants](#7.%20D%C3%A9p%C3%B4ts%20distants)
-> 8. [8. GitHub : travailler en équipe](#8.%20GitHub%20%3A%20travailler%20en%20%C3%A9quipe)
-> 9. [9. Bonnes pratiques](#9.%20Bonnes%20pratiques)
-> 10. [10. GitHub et sécurité](#10.%20GitHub%20et%20s%C3%A9curit%C3%A9)
-> 11. [11. Aide-mémoire](#11.%20Aide-m%C3%A9moire)
-> 12. [12. Exercices](#12.%20Exercices)
+> 1. [1. Pourquoi versionner son code ?](#1-pourquoi-versionner-son-code-)
+> 2. [2. Théorie : les concepts de Git](#2-th%C3%A9orie--les-concepts-de-git)
+> 3. [3. Installation et configuration](#3-installation-et-configuration)
+> 4. [4. Les commandes de base](#4-les-commandes-de-base)
+> 5. [5. Les branches](#5-les-branches)
+> 6. [6. Fusionner : merge, rebase, cherry-pick](#6-fusionner--merge-rebase-cherry-pick)
+> 7. [7. Dépôts distants](#7-d%C3%A9p%C3%B4ts-distants)
+> 8. [8. GitHub : travailler en équipe](#8-github--travailler-en-%C3%A9quipe)
+> 9. [9. Bonnes pratiques](#9-bonnes-pratiques)
+> 10. [10. GitHub et sécurité](#10-github-et-s%C3%A9curit%C3%A9)
+> 11. [11. Aide-mémoire](#11-aide-m%C3%A9moire)
+> 12. [12. Exercices](#12-exercices)
 
 > [!info] Git ≠ GitHub
 > 
@@ -910,3 +910,12 @@ Les dépôts publics sont une source d'information : historique de commits (emai
 > [!quote] Pour retenir **add** → **commit** → **push**, et toujours **pull** avant de commencer. Une branche par tâche, une PR pour relire, `main` toujours propre.
 
 #git #github #cours
+
+---
+
+## 🔗 Related
+
+- [Index GitHub](Index%20GitHub.md) — Index du dossier GitHub
+- [Histoire de GitHub](Histoire%20de%20Github.md) — Historique de la plateforme
+- [Versionning Git](Versionning%20Github.md) — Résumé synthétique des concepts
+- [Index principal](../INDEX.md) — Table des matières générale du vault
