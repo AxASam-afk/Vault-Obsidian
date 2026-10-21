@@ -1,0 +1,79 @@
+{
+  "collapse-filter": false,
+  "search": "",
+  "showTags": false,
+  "showAttachments": false,
+  "hideUnresolved": true,
+  "showOrphans": true,
+  "collapse-color-groups": false,
+  "colorGroups": [
+    {
+      "query": "path:Algo ",
+      "color": {
+        "a": 1,
+        "rgb": 16711680
+      }
+    },
+    {
+      "query": "path:Architecture  ",
+      "color": {
+        "a": 1,
+        "rgb": 11206400
+      }
+    },
+    {
+      "query": "path:GitHub  ",
+      "color": {
+        "a": 1,
+        "rgb": 5701882
+      }
+    },
+    {
+      "query": "path:\"Language C\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 65450
+      }
+    },
+    {
+      "query": "path:OSINT  ",
+      "color": {
+        "a": 1,
+        "rgb": 15597823
+      }
+    },
+    {
+      "query": "path:Réseaux  ",
+      "color": {
+        "a": 1,
+        "rgb": 16777215
+      }
+    },
+    {
+      "query": "path:VBA  ",
+      "color": {
+        "a": 1,
+        "rgb": 7013668
+      }
+    },
+    {
+      "query": "path:Anglais  ",
+      "color": {
+        "a": 1,
+        "rgb": 11141375
+      }
+    }
+  ],
+  "collapse-display": true,
+  "showArrow": true,
+  "textFadeMultiplier": -1.7,
+  "nodeSizeMultiplier": 1.47006578947368,
+  "lineSizeMultiplier": 1.00733658536585,
+  "collapse-forces": false,
+  "centerStrength": 0.599939185080073,
+  "repelStrength": 19.7388021630446,
+  "linkStrength": 1,
+  "linkDistance": 500,
+  "scale": 0.0667419491495401,
+  "close": false
+}

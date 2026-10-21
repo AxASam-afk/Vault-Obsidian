@@ -91,10 +91,13 @@
 
 ---
 
-## 🔗 Liens
+## 🔗 Related
 
-- [[PRT1]]
-- [PRT1 - Exercices](../Exo/PRT1%20-%20Exercices.md)
+- [Index OSINT Cours](INDEX.md) — Index du dossier OSINT/Cours
+- [Index OSINT](../Index%20OSINT.md) — Index du dossier OSINT
+- [Index principal](../../INDEX.md) — Table des matières générale du vault
+- [OSINT — Partie 1](PRT1%20OSINT.md)
 - [Dork Google](../DORK%20GOOGLE.md)
-- [[Adresse IP]]
+- [Exercices info sur image](../Exo/Exercices%20info%20sur%20image.md)
+- [OSINT — Exercices (PRT1)](../Exo/PRT1%20-%20Exercices.md)
 - #osint #outils

@@ -111,6 +111,11 @@ Idéalement, un système doit pouvoir s'utiliser sans documentation. Quand une a
 - Reconnaissance plutôt que mémorisation (H6) : rendre visible plutôt que faire retenir
 
 
-Liens:
-	[IHM](IHM.md)
+## 🔗 Related
+
+- [Index Modélisation](Index%20Mod%C3%A9lisation.md) — Index du dossier Modélisation
+- [Index principal](../INDEX.md) — Table des matières générale du vault
+- [IHM](IHM.md)
+- [IHM 2](IHM%202.md)
+- [Projets](Projets.md)
 	

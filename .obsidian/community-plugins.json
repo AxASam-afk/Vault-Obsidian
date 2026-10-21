@@ -3,5 +3,6 @@
   "style-text",
   "homepage",
   "terminal",
-  "github-sync"
+  "github-sync",
+  "graph-styler"
 ]

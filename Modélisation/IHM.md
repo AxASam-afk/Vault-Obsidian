@@ -56,11 +56,10 @@
 
 ---
 
-## Liens
+## 🔗 Related
 
-[Projets](Projets.md)
-[Interview](Interview.md)
-[IHM 2](IHM%202.md)
-
---- 
-[🏠 Page d'accueil principale](../Professionnel/Homme.md)
+- [Index Modélisation](Index%20Mod%C3%A9lisation.md) — Index du dossier Modélisation
+- [Index principal](../INDEX.md) — Table des matières générale du vault
+- [Projets](Projets.md)
+- [Interview](Interview.md)
+- [IHM 2](IHM%202.md)

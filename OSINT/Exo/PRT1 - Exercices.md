@@ -95,9 +95,14 @@ donnc le nom de la ville Américaine a trouve étais dallas
 
 ---
 
-## 🔗 Liens
+## 🔗 Related
 
-- [PRT1 OSINT](../Cours/PRT1%20OSINT.md)
+- [Index OSINT Exo](INDEX.md) — Index du dossier OSINT/Exo
+- [Index OSINT](../Index%20OSINT.md) — Index du dossier OSINT
+- [Index principal](../../INDEX.md) — Table des matières générale du vault
+- [OSINT — Partie 1](../Cours/PRT1%20OSINT.md)
+- [Boîte à outils OSINT](../Cours/Boite%20%C3%A0%20outils%20OSINT.md)
 - [DORK GOOGLE](../DORK%20GOOGLE.md)
+- [Exercices info sur image](Exercices%20info%20sur%20image.md)
 - #osint #osint/prt1 #exercices
 

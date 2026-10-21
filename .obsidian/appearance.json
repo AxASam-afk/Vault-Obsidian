@@ -1,4 +1,7 @@
 {
   "accentColor": "#ff0000",
-  "cssTheme": "Retroma"
+  "cssTheme": "Retroma",
+  "enabledCssSnippets": [
+    "graph-styler-custom-1792576596985"
+  ]
 }

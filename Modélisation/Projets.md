@@ -262,3 +262,13 @@ Pour cet exercice, six personas de chasseurs de trophées ont été construits, 
 3. Formaliser les personas finaux sous forme de fiches synthétiques (une page par persona).
 4. Prioriser les besoins communs identifiés pour définir le MVP de l'application.
 5. Tester les premiers wireframes ou maquettes auprès d'un sous-ensemble des personnes interviewées.
+
+## 🔗 Related
+
+- [Index Modélisation](Index%20Mod%C3%A9lisation.md) — Index du dossier Modélisation
+- [Index principal](../INDEX.md) — Table des matières générale du vault
+- [Interview](Interview.md)
+- [IHM](IHM.md)
+- [IHM 2](IHM%202.md)
+- [Les heuristiques de Nielsen](Les%20heuristiques%20de%20Nielsen.md)
+- [Platinum Ops — Livrables IHM](Platinum%20Ops%20%E2%80%94%20Livrables%20IHM.md)

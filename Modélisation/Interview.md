@@ -167,4 +167,10 @@
 **8. Fidélisation :**  
 "Des rappels intelligents sur ma progression en cours, sans être intrusifs, pour me remotiver à reprendre un jeu en pause."
 
-Liens [Projets](Projets.md)
+## 🔗 Related
+
+- [Index Modélisation](Index%20Mod%C3%A9lisation.md) — Index du dossier Modélisation
+- [Index principal](../INDEX.md) — Table des matières générale du vault
+- [Projets](Projets.md)
+- [IHM](IHM.md)
+- [IHM 2](IHM%202.md)

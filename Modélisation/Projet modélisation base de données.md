@@ -164,3 +164,10 @@ CREATE TABLE LigneCommande (
 
 > [!NOTE] Prochain cours
 > Nous verrons les **vues**, les **procédures stockées** et les **déclencheurs** pour encapsuler la logique métier dans la base de données.
+
+## 🔗 Related
+
+- [Index Modélisation](Index%20Mod%C3%A9lisation.md) — Index du dossier Modélisation
+- [Index principal](../INDEX.md) — Table des matières générale du vault
+- [Les bases de données relationnelles](Les%20bases%20de%20donn%C3%A9es%20relationnelles.md)
+- [Projets](Projets.md)

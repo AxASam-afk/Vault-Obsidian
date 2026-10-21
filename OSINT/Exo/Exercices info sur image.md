@@ -36,6 +36,11 @@ Soit un écart de **65 ans, 9 mois et 13 jours** entre le 6 août 1945 et le 19 
 Déterminé en croisant le taux de change en vigueur à la date de la photo (via Google) → **8,62 € / 8,64 €** selon la source de taux utilisée.
 
 
-liens:
-	[PRT1 OSINT](../Cours/PRT1%20OSINT.md)
-	[PRT1 - Exercices](PRT1%20-%20Exercices.md)
+## 🔗 Related
+
+- [Index OSINT Exo](INDEX.md) — Index du dossier OSINT/Exo
+- [Index OSINT](../Index%20OSINT.md) — Index du dossier OSINT
+- [Index principal](../../INDEX.md) — Table des matières générale du vault
+- [OSINT — Partie 1](../Cours/PRT1%20OSINT.md)
+- [OSINT — Exercices (PRT1)](PRT1%20-%20Exercices.md)
+- [DORK GOOGLE](../DORK%20GOOGLE.md)

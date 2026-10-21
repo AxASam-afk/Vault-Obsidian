@@ -193,3 +193,11 @@ flowchart LR
 > - Développer des prototypes à différentes fidelités
 > - Conduire des tests utilisabilité avec les personas représentatifs
 > - Itérer basé sur les retours utilisateurs
+
+## 🔗 Related
+
+- [Index Modélisation](Index%20Mod%C3%A9lisation.md) — Index du dossier Modélisation
+- [Index principal](../INDEX.md) — Table des matières générale du vault
+- [IHM](IHM.md) — Interfaces Homme-Machine
+- [Interview](Interview.md)
+- [Projets](Projets.md)

@@ -142,8 +142,13 @@ Résultat obtenu en interrogeant Shodan avec l'IP de l'ESGI vue en exercice :
 
 ---
 
-## 🔗 Liens
+## 🔗 Related
 
+- [Index OSINT Cours](INDEX.md) — Index du dossier OSINT/Cours
+- [Index OSINT](../Index%20OSINT.md) — Index du dossier OSINT
+- [Index principal](../../INDEX.md) — Table des matières générale du vault
+- [Boîte à outils OSINT](Boite%20%C3%A0%20outils%20OSINT.md)
 - [DORK GOOGLE](../DORK%20GOOGLE.md)
-- [PRT1 - Exercices](../Exo/PRT1%20-%20Exercices.md)
+- [Exercices info sur image](../Exo/Exercices%20info%20sur%20image.md)
+- [OSINT — Exercices (PRT1)](../Exo/PRT1%20-%20Exercices.md)
 - #osint #osint/prt1

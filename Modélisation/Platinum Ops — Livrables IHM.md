@@ -171,3 +171,12 @@ Trois retours des tests confirment cette revue : l'inversion du chat, l'absence 
 # Liens Figma Phase 2
 
 https://www.figma.com/design/COdOEBj6G6MlszESmAibdG/Maquette?node-id=44-300&t=oUALQaGYZrBurEue-1
+
+## 🔗 Related
+
+- [Index Modélisation](Index%20Mod%C3%A9lisation.md) — Index du dossier Modélisation
+- [Index principal](../INDEX.md) — Table des matières générale du vault
+- [IHM](IHM.md)
+- [IHM 2](IHM%202.md)
+- [Interview](Interview.md)
+- [Projets](Projets.md)
