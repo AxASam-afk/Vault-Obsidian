@@ -76,11 +76,3 @@ Matière/
 
 ---
 
-<div align="center">
-
----
-
-**Dernière mise à jour** : `{{date:YYYY-MM-DD}}`  
-*Gardez cet index à jour — ajoutez chaque nouvelle note dans sa section correspondante.*
-
-</div>
