@@ -1,0 +1,41 @@
+# Architecture
+
+Index of this folder. Each document links back here; add a line when you add a file.
+
+## 🔗 Related
+
+- [Index principal](../INDEX.md)
+
+- [Infrastructure & Réseaux](00%20-%20Index.md)
+- [01 — Vocabulaire de l'infrastructure](01%20-%20Vocabulaire%20de%20l%27infrastructure%20%28Cloud%2C%20DevOps%2C%20Virtualisation%29.md)
+- [02 — Introduction aux réseaux](02%20-%20Introduction%20aux%20r%E2%94%9C%C2%AEseaux.md)
+- [03 — Types de réseaux](03%20-%20Types%20de%20r%E2%94%9C%C2%AEseaux%20%28LAN%2C%20WLAN%2C%20WAN%2C%20MAN%2C%20Internet%29.md)
+- [04 — Topologies physiques et logiques](04%20-%20Topologies%20physiques%20et%20logiques.md)
+- [05 — Ethernet (802.3) et adresse MAC](05%20-%20Ethernet%20%28802.3%29%20et%20adresse%20MAC.md)
+- [06 — Types de communication : Unicast, Multicast, Broadcast](06%20-%20Types%20de%20communication%20%28Unicast%2C%20Multicast%2C%20Broadcast%29.md)
+- [07 — Protocoles, performances et encapsulation](07%20-%20Protocoles%2C%20d%E2%94%9C%C2%AEbit%2C%20latence%20et%20encapsulation.md)
+- [08 — Le modèle OSI](08%20-%20Mod%E2%94%9C%C2%BFle%20OSI.md)
+- [09 — Modèle TCP/IP et communication complète](09%20-%20Mod%E2%94%9C%C2%BFle%20TCP-IP%20et%20communication%20compl%E2%94%9C%C2%BFte.md)
+- [10 — Switch, table MAC, domaines et ARP](10%20-%20Switch%2C%20table%20MAC%20et%20ARP.md)
+- [11 — VLAN, trunk, 802.1Q, STP, EtherChannel](11%20-%20VLAN%2C%20trunk%2C%20STP%20et%20EtherChannel.md)
+- [12 — Adressage IPv4](12%20-%20Adressage%20IPv4.md)
+- [13 — Subnetting, CIDR et VLSM](13%20-%20Subnetting%2C%20CIDR%20et%20VLSM.md)
+- [14 — IPv6](14%20-%20IPv6.md)
+- [15 — Couche transport : TCP, UDP, ports](15%20-%20TCP%2C%20UDP%20et%20ports.md)
+- [16 — DNS (Domain Name System)](16%20-%20DNS.md)
+- [17 — DHCP (Dynamic Host Configuration Protocol)](17%20-%20DHCP.md)
+- [18 — Protocoles réseau essentiels](18%20-%20Protocoles%20essentiels.md)
+- [19 — Routage](19%20-%20Routage.md)
+- [20 — NAT et PAT](20%20-%20NAT%20et%20PAT.md)
+- [21 — Wi-Fi (IEEE 802.11)](21%20-%20Wi-Fi.md)
+- [22 — Sécurité réseau](22%20-%20S%E2%94%9C%C2%AEcurit%E2%94%9C%C2%AE%20r%E2%94%9C%C2%AEseau.md)
+- [23 — Linux pour l'infrastructure](23%20-%20Linux%20pour%20l%27infrastructure.md)
+- [24 — Windows Server](24%20-%20Windows%20Server.md)
+- [25 — Active Directory et LDAP](25%20-%20Active%20Directory%20et%20LDAP.md)
+- [26 — Virtualisation (approfondissement)](26%20-%20Virtualisation%20avanc%E2%94%9C%C2%AEe.md)
+- [27 — Stockage et RAID](27%20-%20Stockage%20et%20RAID.md)
+- [28 — Sauvegarde et restauration](28%20-%20Sauvegarde%20et%20restauration.md)
+- [29 — Supervision (monitoring) et logs](29%20-%20Supervision%20et%20logs.md)
+- [30 — Diagnostic et dépannage réseau](30%20-%20Diagnostic%20r%E2%94%9C%C2%AEseau.md)
+- [31 — Architecture réseau d'entreprise et haute disponibilité](31%20-%20Architecture%20d%27entreprise%20et%20haute%20disponibilit%E2%94%9C%C2%AE.md)
+- [32 — Cloud, réseaux virtuels, conteneurs et Infrastructure as Code](32%20-%20Cloud%2C%20conteneurs%20et%20Infrastructure%20as%20Code.md)
