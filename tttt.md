@@ -32,8 +32,17 @@ Cependant, les ordinateurs Mac sont souvent plus chers et certains jeux sont moi
 
 
 
-Windows is developed by Microsoft. It can be run on almost any PC, from entry-level to high-end machines, so a wide choice of devices and prices is offered. It is considered the best system for gaming, and a huge catalog of software is available for it, especially for office work, engineering and management. It can also be customized extensively. However, it is more often targeted by viruses (even though it is well protected by Windows Defender), the experience can vary depending on the machine, and updates are sometimes felt to be intrusive.
+Before we begin, we are going to compare Windows and macOS. I will present Windows, while my friend will present macOS. At the end, we will give a short conclusion to compare the two systems.
+
+**Windows**
+
+Windows is developed by Microsoft. It works on almost any PC, from low-cost computers to high-performance machines. This means there is a wide choice of computers and prices.
+
+Windows is considered the best system for gaming. It also offers a large number of software programs for work, engineering and business. In addition, it is highly customizable.
+
+However, Windows is more often targeted by viruses, even though it has built-in protection called Windows Defender. Performance can also vary depending on the computer, and updates can sometimes be annoying.
+
 
 macOS is developed by Apple. It can only be installed on Macs, which are generally more expensive. Its interface is regarded as very consistent and intuitive, and it is seamlessly integrated with the iPhone, iPad and Apple Watch. It is highly appreciated for creative work (video, music, design), and since it is based on Unix, it is liked by developers. It is less often targeted by viruses, and its updates are handled more discreetly. On the other hand, the choice of games is limited and less customization is allowed.
 
-**In summary:** Windows is seen as more flexible, cheaper and ideal for gaming and office work. macOS is considered smoother and more consistent, ideal for creative work and the Apple ecosystem, but it is more expensive and less open.
+**In summary:** Windows is seen as more flexible, cheaper and ideal for gaming and office work. macOS is considered smoother and more consistent, ideal for creative work and the Apple ecosystem, but it is more expensive and less open. we can't realy tell what is th
