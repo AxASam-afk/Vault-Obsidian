@@ -1,4 +1,4 @@
-﻿# MOC - Niveau A1 (Debutant)
+# MOC - Niveau A1 (Debutant)
 
 > [Hub Principal Anglais](../00-Index-Anglais.md) | Programme : [00-Programme-A1](00-Programme-A1.md) | Vocabulaire : [Vocabulaire-A1](Vocabulaire-A1.md) | Exercices : [Exercices-A1](Exercices-A1.md)
 
