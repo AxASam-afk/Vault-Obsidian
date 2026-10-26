@@ -45,4 +45,4 @@ However, Windows is more often targeted by viruses, even though it has built-in 
 
 macOS is developed by Apple. It can only be installed on Macs, which are generally more expensive. Its interface is regarded as very consistent and intuitive, and it is seamlessly integrated with the iPhone, iPad and Apple Watch. It is highly appreciated for creative work (video, music, design), and since it is based on Unix, it is liked by developers. It is less often targeted by viruses, and its updates are handled more discreetly. On the other hand, the choice of games is limited and less customization is allowed.
 
-**In summary:** Windows is seen as more flexible, cheaper and ideal for gaming and office work. macOS is considered smoother and more consistent, ideal for creative work and the Apple ecosystem, but it is more expensive and less open. we can't realy tell what is th
+**In summary**, Windows is cheaper and better for gaming, while macOS is simple and great for creative work. In the end, neither is the best for everyone. It depends on your needs and preferences.
