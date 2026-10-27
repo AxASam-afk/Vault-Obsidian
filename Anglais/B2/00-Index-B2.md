@@ -1,4 +1,4 @@
-﻿# MOC - Niveau B2 (Intermediaire Superieur)
+# MOC - Niveau B2 (Intermediaire Superieur)
 
 > [Hub Principal Anglais](../00-Index-Anglais.md) | [Niveau B1 Precedent](../B1/00-Index-B1.md) | [Niveau C1 Suivant](../C1/00-Index-C1.md)
 
