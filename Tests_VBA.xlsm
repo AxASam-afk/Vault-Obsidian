@@ -1,0 +1,732 @@
+================================================================================
+TESTS VBA - TP Cours du 27 octobre 2026
+================================================================================
+
+Cette feuille contient les macros de test pour chaque section du TP VBA.
+Utilisez les boutons ou exécutez les macros directement.
+
+================================================================================
+BOUTONS DE NAVIGATION
+================================================================================
+
+Sub NaviguerSectionI()
+    MsgBox "Section I : Création de macro avec feuille nouvelle", vbInformation
+    ' Ici on pourrait ajouter un UserForm ou un changement de feuille
+End Sub
+
+Sub NaviguerSectionII()
+    MsgBox "Section II : Conteneurs Range et Cells", vbInformation
+End Sub
+
+Sub NaviguerSectionIII()
+    MsgBox "Section III : Procédures avec paramètres optionnels", vbInformation
+End Sub
+
+Sub NaviguerSectionIV()
+    MsgBox "Section IV : Fonction MAX de deux nombres", vbInformation
+End Sub
+
+Sub NaviguerSectionV()
+    MsgBox "Section V : Fonction factorielle", vbInformation
+End Sub
+
+Sub NaviguerSectionVI()
+    MsgBox "Section VI : Gestion d'erreurs en VBA", vbInformation
+End Sub
+
+Sub NaviguerSectionVII()
+    MsgBox "Section VII : Recherche de sous-chaîne", vbInformation
+End Sub
+
+Sub NaviguerSectionVIII()
+    MsgBox "Section VIII : Extraction nom et extension fichier", vbInformation
+End Sub
+
+Sub NaviguerSectionIX()
+    MsgBox "Section IX : Saisie et vérification de type de cellule", vbInformation
+End Sub
+
+Sub NaviguerSectionX()
+    MsgBox "Section X : Tableaux 2 dimensions", vbInformation
+End Sub
+
+Sub NaviguerSectionXI()
+    MsgBox "Section XI : Tableaux 3 dimensions de réels", vbInformation
+End Sub
+
+Sub NaviguerSectionXII()
+    MsgBox "Section XII : Événement Double-clic sur cellule", vbInformation
+End Sub
+
+Sub NaviguerSectionXIII()
+    MsgBox "Section XIII : Fonction miroir", vbInformation
+End Sub
+
+Sub NaviguerSectionXIV()
+    MsgBox "Section XIV : Fonction nombre premier", vbInformation
+End Sub
+
+Sub NaviguerSectionXV()
+    MsgBox "Section XV : Afficher nom feuille active", vbInformation
+End Sub
+
+Sub NaviguerSectionXVI()
+    MsgBox "Section XVI : Effacer plage de données avec confirmation", vbInformation
+End Sub
+
+Sub NaviguerTPAssistes()
+    MsgBox "TP Assistés : Courbe de Gauss, Formulaires, Questions VBA, etc.", vbInformation
+End Sub
+
+================================================================================
+SECTION I : Création de macro avec feuille nouvelle
+================================================================================
+
+Sub Test_CreerFeuilleDeBase()
+    ' Test de la macro de base qui crée une feuille NF01 avec données
+    Dim ws As Worksheet
+    Dim nextSheetNum As Integer
+    Dim sheetName As String
+    Dim i As Integer
+
+    ' Trouver nom unique
+    nextSheetNum = 1
+    Do While True
+        sheetName = "NF" & Format(nextSheetNum, "00")
+        On Error Resume Next
+        Set ws = ThisWorkbook.Worksheets(sheetName)
+        On Error GoTo 0
+        If ws Is Nothing Then Exit Do
+        nextSheetNum = nextSheetNum + 1
+    Loop
+
+    ' Ajouter feuille
+    Set ws = ThisWorkbook.Worksheets.Add(After:=ThisWorkbook.Worksheets(ThisWorkbook.Worksheets.Count))
+    ws.Name = sheetName
+
+    ' Entrer valeurs
+    ws.Range("A1").Value = 10
+    ws.Range("A2").Value = 20
+    ws.Range("A3").Value = 30
+
+    ' Formule somme
+    ws.Range("A4").Formula = "=SUM(A1:A3)"
+
+    ' Bordures
+    ws.Range("A1:A4").BorderAround LineStyle:=xlContinuous, Weight:=xlThin
+
+    MsgBox "Feuille '" & sheetName & "' créée avec succès!" & vbCrLf & _
+           "A1=" & ws.Range("A1").Value & ", A2=" & ws.Range("A2").Value & ", A3=" & ws.Range("A3").Value & vbCrLf & _
+           "Formule A4: " & ws.Range("A4").Formula, vbInformation
+End Sub
+
+Sub Test_CreerFeuilleInteractive()
+    ' Test de la version interactive avec saisie utilisateur
+    Dim sheetName As String
+    Dim ws As Worksheet
+    Dim sheetExists As Boolean
+    Dim reponse As VbMsgBoxResult
+
+    reponse = MsgBox "Voulez-vous ajouter une nouvelle feuille de calcul?", vbYesNo + vbQuestion
+    If reponse = vbNo Then Exit Sub
+
+    sheetName = InputBox("Entrez le nom de la feuille souhaitée :")
+    If sheetName = "" Then Exit Sub
+
+    ' Vérifier si le nom est déjà utilisé
+    sheetExists = False
+    On Error Resume Next
+    Set ws = ThisWorkbook.Worksheets(sheetName)
+    On Error GoTo 0
+
+    If Not ws Is Nothing Then
+        sheetExists = True
+        MsgBox "Le nom '" & sheetName & "' est déjà utilisé!" & vbCrLf & _
+               "Veuillez choisir un autre nom.", vbExclamation
+        Exit Sub
+    End If
+
+    ' Créer la feuille
+    Set ws = ThisWorkbook.Worksheets.Add
+    ws.Name = sheetName
+
+    ' Valeurs par défaut
+    ws.Range("A1").Value = 10
+    ws.Range("A2").Value = 20
+    ws.Range("A3").Value = 30
+
+    ' Formule
+    ws.Range("A4").Formula = "=SUM(A1:A3)"
+
+    ' Bordures
+    ws.Range("A1:A4").BorderAround LineStyle:=xlContinuous, Weight:=xlThin
+
+    MsgBox "Feuille '" & sheetName & "' créée avec succès!", vbInformation
+End Sub
+
+================================================================================
+SECTION II : Conteneurs Range et Cells
+================================================================================
+
+Sub Test_RemplirBlocRange()
+    ' Remplir la plage A1:B5 avec 42
+    Range("A1:B5").Value = 42
+    MsgBox "Plage A1:B5 remplie avec 42", vbInformation
+End Sub
+
+Sub Test_RemplirPlageUtilisateur()
+    ' Remplir une plage dont les bornes sont saisies par l'utilisateur
+    Dim debutRange As String
+    Dim finRange As String
+    Dim valeur As String
+
+    debutRange = InputBox("Coordonnée de départ (ex: A1):")
+    finRange = InputBox("Coordonnée de fin (ex: B10):")
+    valeur = InputBox("Valeur à saisir:")
+
+    If debutRange <> "" And finRange <> "" And valeur <> "" Then
+        On Error Resume Next
+        Range(debutRange & ":" & finRange).Value = valeur
+        On Error GoTo 0
+        MsgBox "Plage " & debutRange & " : " & finRange & " remplie avec " & valeur, vbInformation
+    End If
+End Sub
+
+Sub Test_BoutonSaisie()
+    ' Crée un bouton qui saisit une valeur dans la sélection
+    Dim btn As Button
+    Set btn = ActiveSheet.Buttons.Add( _
+        Left:=ActiveCell.Left, _
+        Width:=100, _
+        Top:=ActiveCell.Top + ActiveCell.Height, _
+        Height:=25)
+
+    btn.Caption = "Saisir valeur"
+    Set btn.OnAction = "SaisirValeurSelection"
+End Sub
+
+Sub SaisirValeurSelection()
+    Dim valeur As String
+    valeur = InputBox("Valeur à affecter à la sélection actuelle :")
+    If valeur <> "" Then
+        Selection.Value = valeur
+    End If
+End Sub
+
+================================================================================
+SECTION III : Procédures avec paramètres optionnels
+================================================================================
+
+Sub Test_TraceCercle()
+    ' Test de la procédure tracecercle
+    ' Avec paramètres ordonnés
+    Call tracecercle(0, 0, 5)
+    MsgBox "Procédure tracecercle appelée avec paramètres ordonnés", vbInformation
+End Sub
+
+Sub Test_TraceCercleNommes()
+    ' Avec paramètres nommés
+    Call tracecercle(x:=0, y:=0, r:=5)
+    MsgBox "Procédure tracecercle appelée avec paramètres nommés", vbInformation
+End Sub
+
+Sub Test_ProduitCinqVars()
+    ' Test de la fonction produit de 5 variables
+    Dim resultat As Double
+
+    ' Avec tous les paramètres
+    resultat = ProduitCinqVars(1, 2, 3, 4, 5)
+    MsgBox "ProduitCinqVars(1,2,3,4,5) = " & resultat & " (attendu: 120)", vbInformation
+
+    ' Avec paramètres par défaut
+    resultat = ProduitCinqVars(1, 2, 3)
+    MsgBox "ProduitCinqVars(1,2,3) = " & resultat & " (attendu: 12)", vbInformation
+
+    ' Avec paramètres nommés
+    resultat = ProduitCinqVars(a:=1, b:=2, e:=3)
+    MsgBox "ProduitCinqVars(a:=1,b:=2,e:=3) = " & resultat & " (attendu: 6)", vbInformation
+End Sub
+
+================================================================================
+SECTION IV : Fonction MAX de deux nombres
+================================================================================
+
+Sub Test_MaxDeuxNombres()
+    ' Test de la fonction MaxDeuxNombres
+    Dim val1 As Double, val2 As Double
+    Dim resultat As Double
+
+    val1 = InputBox("Entrez la première valeur :")
+    val2 = InputBox("Entrez la deuxième valeur :")
+
+    If IsNumeric(val1) And IsNumeric(val2) Then
+        resultat = MaxDeuxNombres(CDbl(val1), CDbl(val2))
+        MsgBox "Le plus grand des deux nombres est : " & resultat, vbInformation
+    Else
+        MsgBox "Veuillez entrer des valeurs numériques valides.", vbExclamation
+    End If
+End Sub
+
+================================================================================
+SECTION V : Fonction factorielle
+================================================================================
+
+Sub_TestFactorielle()
+    ' Test de la procédure factorielle avec validation de saisie
+    Dim n As Long
+    Dim resultat As Double
+
+    Do
+        n = InputBox("Entrez la valeur de n pour calculer sa factorielle :", "Saisie de n")
+
+        If Not IsNumeric(n) Then
+            MsgBox "Veuillez entrer une valeur numérique.", vbExclamation
+            Continue Do
+        End If
+
+        n = CInt(n)
+
+        If n < 0 Then
+            MsgBox "La factorielle d'un nombre négatif n'a pas de sens. Veuillez réessayez.", vbExclamation
+            Continue Do
+        End If
+
+        If n > 10 Then
+            MsgBox "Attention : n = " & n & " est trop grand (> 10). Sortie de la procédure.", vbExclamation
+            Exit Sub
+        End If
+
+        Exit Do
+
+    Loop
+
+    ' Calcul itératif
+    resultat = FactorielleIterative(n)
+    MsgBox "Factorielle(" & n & ") (itérative) : " & resultat, vbInformation
+
+    ' Calcul récursif
+    resultat = FactorielleRecursive(n)
+    MsgBox "Factorielle(" & n & ") (récursive) : " & resultat, vbInformation
+End Sub
+
+================================================================================
+SECTION VI : Gestion d'erreurs en VBA
+================================================================================
+
+Sub_TestResume()
+    ' Test de la gestion avec Resume
+    On Error Resume Next
+
+    Dim t(10) As Double
+    t(11) = 25.321 ' Cette ligne génère une erreur
+
+    If Err.Number <> 0 Then
+        MsgBox "Erreur n°" & Err.Number & ": " & Err.Description
+        Err.Clear
+    End If
+
+    MsgBox "Nous sommes passés après l'erreur"
+End Sub
+
+Sub_TestGestionComplete()
+    ' Test de la gestion complète avec Error Handler
+    On Error GoTo GestionErreur
+
+    Dim t(10) As Double
+    t(11) = 25.321 ' Cette ligne génère une erreur
+
+    MsgBox "Nous sommes passés avant l'erreur"
+    Exit Sub
+
+GestionErreur:
+    MsgBox "Erreur n°" & Err.Number & ": " & Err.Description & vbCrLf & _
+           "Impossible de continuer.", vbCritical
+    Resume Next
+End Sub
+
+================================================================================
+SECTION VII : Recherche de sous-chaîne
+================================================================================
+
+Sub_TestRechercheSousChaine()
+    ' Test de la fonction RechercheSousChaine
+    Dim chaine As String
+    Dim sousChaine As String
+    Dim posDebut As Long
+    Dim position As Long
+
+    chaine = InputBox("Entrez la chaîne principale :")
+    sousChaine = InputBox("Entrez la sous-chaine à rechercher :")
+    posDebut = InputBox("Entrez la position de départ (1 par défaut):")
+    If posDebut = "" Then posDebut = 1
+
+    position = RechercheSousChaine(chaine, sousChaine, posDebut)
+
+    If position > 0 Then
+        MsgBox "La sous-chaine est trouvée à la position " & position, vbInformation
+    Else
+        MsgBox "La sous-chaine n'est pas présente dans la chaîne donnée à partir de la position " & posDebut, vbExclamation
+    End If
+End Sub
+
+================================================================================
+SECTION VIII : Extraction nom et extension fichier
+================================================================================
+
+Sub_TestExtraireNomExtension()
+    ' Test de la fonction ExtraireNomExtension
+    Dim resultat As String
+
+    resultat = ExtraireNomExtension("classeur.xls")
+    MsgBox "ExtraireNomExtension(""classeur.xls"") = " & resultat & " (attendu: ""classeur et xls"")", vbInformation
+
+    resultat = ExtraireNomExtension("document.pdf")
+    MsgBox "ExtraireNomExtension(""document.pdf"") = " & resultat & " (attendu: ""document et pdf"")", vbInformation
+
+    resultat = ExtraireNomExtension("sans_extension")
+    MsgBox "ExtraireNomExtension(""sans_extension"") = " & resultat, vbInformation
+End Sub
+
+================================================================================
+SECTION IX : Saisie et vérification de type de cellule
+================================================================================
+
+Sub_TestVerifierTypeCellule()
+    ' Test de la procédure de vérification de type
+    Dim valeurSaisie As String
+    Dim choix As VbMsgBoxResult
+
+    valeurSaisie = InputBox("Entrez une valeur de cellule à vérifier :")
+
+    choix = MsgBox "Vouez-vous vérifier si le type est :" & vbCrLf & vbCrLf & _
+                   "1. Une date" & vbCrLf & _
+                   "2. Un entier", _
+                   vbQuestion + vbYesNoNo, "Type de données"
+
+    Select Case choix
+        Case vbYes
+            If IsDate(valeurSaisie) Then
+                MsgBox "C'est une date!" & vbCrLf & _
+                       "Formats possibles :" & vbCrLf & _
+                       "- Format court : " & Format(CDate(valeurSaisie), "dd/mm/yyyy") & vbCrLf & _
+                       "- Format long : " & Format(CDate(valeurSaisie), "dddd dd mmmm yyyy") & vbCrLf & _
+                       "- Format US : " & Format(CDate(valeurSaisie), "mm/dd/yyyy"), vbInformation
+            Else
+                MsgBox "Ce n'est pas une date.", vbInformation
+            End If
+
+        Case vbNo
+            If IsNumeric(valeurSaisie) Then
+                Dim nb As Double
+                nb = CDouble(valeurSaisie)
+
+                If nb <= 100 Then
+                    MsgBox "C'est un entier <= 100." & vbCrLf & _
+                           "Affichage en pourcentage : " & Format(nb / 100, "0%"), vbInformation
+                Else
+                    MsgBox "C'est un entier > 100." & vbCrLf & _
+                           "Affichage avec symbole € : " & nb & " €", vbInformation
+                End If
+            Else
+                MsgBox "Ce n'est pas un nombre valide.", vbInformation
+            End If
+
+        Case vbNull
+            MsgBox "Aucune vérification effectuée.", vbInformation
+    End Select
+End Sub
+
+================================================================================
+SECTION X : Tableaux 2 dimensions
+================================================================================
+
+Sub_TestTableau2Dimensions()
+    ' Test du tableau 2D 5x6
+    Dim tab(1 To 5, 1 To 6) As Integer
+    Dim i As Integer, j As Integer
+    Dim message As String
+
+    ' Saisir les valeurs
+    For i = 1 To 5
+        For j = 1 To 6
+            tab(i, j) = InputBox("Entrez la valeur pour tab(" & i & ", " & j & "):")
+        Next j
+    Next i
+
+    ' Afficher
+    message = "Contenu du tableau 5x6 :" & vbCrLf & vbCrLf
+    For i = 1 To 5
+        For j = 1 To 6
+            message = message & "tab(" & i & ", " & j & ") = " & tab(i, j) & vbTab
+        Next j
+        message = message & vbCrLf
+    Next i
+
+    MsgBox message, vbInformation, "Tableau 2D"
+End Sub
+
+================================================================================
+SECTION XI : Tableaux 3 dimensions de réels
+================================================================================
+
+Sub_TestTableau3Dimensions()
+    ' Test du tableau 3D 5x4x3
+    Dim tab(1 To 5, 1 To 4, 1 To 3) As Double
+    Dim i As Integer, j As Integer, k As Integer
+    Dim message As String
+
+    ' Saisir les valeurs
+    For i = 1 To 5
+        For j = 1 To 4
+            For k = 1 To 3
+                tab(i, j, k) = InputBox("Entrez la valeur pour tab(" & i & ", " & j & ", " & k & "):")
+            Next k
+        Next j
+    Next i
+
+    ' Afficher
+    message = "Contenu du tableau 5x4x3 :" & vbCrLf & vbCrLf
+    For i = 1 To 5
+        For j = 1 To 4
+            For k = 1 To 3
+                message = message & "tab(" & i & ", " & j & ", " & k & ") = " & tab(i, j, k) & vbTab
+            Next k
+            message = message & vbCrLf
+        Next j
+        message = message & vbCrLf & "---" & vbCrLf
+    Next i
+
+    MsgBox message, vbInformation, "Tableau 3D"
+End Sub
+
+================================================================================
+SECTION XII : Événement Double-clic sur cellule
+================================================================================
+
+' NOTE : Ce code doit être placé dans l'éditeur VBA dans l'événement
+' Worksheet_BeforeDoubleClick de la feuille concernée
+
+Private Sub Worksheet_BeforeDoubleClick(ByVal Target As Range, Cancel As Boolean)
+    ' Afficher message avec adresse et nom de feuille
+    MsgBox "Double-clic sur la cellule " & Target.Address & vbCrLf & _
+           "Dans la feuille : " & Me.Name, vbInformation
+
+    ' Empêcher la cellule de passer en mode mise à jour
+    Cancel = True
+End Sub
+
+Sub_TestEvenementDoubleClic()
+    ' Macro de test - affiche un message explicatif
+    MsgBox "Pour tester l'événement double-clic :" & vbCrLf & vbCrLf & _
+           "1. Ouvrez l'éditeur VBA (Alt+F11)" & vbCrLf & _
+           "2. Double-cliquez sur une feuille dans l'explorateur" & vbCrLf & _
+           "3. Collez le code Worksheet_BeforeDoubleClick" & vbCrLf & _
+           "4. Double-cliquez sur une cellule dans Excel", vbInformation
+End Sub
+
+================================================================================
+SECTION XIII : Fonction miroir
+================================================================================
+
+Sub_TestFonctionMiroire()
+    ' Test de la fonction miroir
+    Dim resultat As String
+
+    resultat = Miroire("Bonjour")
+    MsgBox "Miroire(""Bonjour"") = " & resultat & " (attendu: ""ruojnoB"")", vbInformation
+
+    resultat = Miroire("VBA")
+    MsgBox "Miroire(""VBA"") = " & resultat & " (attendu: ""ABV"")", vbInformation
+
+    resultat = Miroire("12345")
+    MsgBox "Miroire(""12345"") = " & resultat & " (attendu: ""54321"")", vbInformation
+
+    resultat = Miroire("")
+    MsgBox "Miroire(""") = " & resultat & " (attendu: """")", vbInformation
+End Sub
+
+================================================================================
+SECTION XIV : Fonction nombre premier
+================================================================================
+
+Sub_TestEstPremier()
+    ' Test de la fonction EstPremier
+    Dim testVals As Variant
+    Dim i As Integer
+    Dim resultat As Boolean
+    Dim message As String
+
+    testVals = Array(2, 3, 4, 5, 97, 100, 0, 1)
+    message = "Résultats du test EstPremier :" & vbCrLf & vbCrLf
+
+    For i = LBound(testVals) To UBound(testVals)
+        resultat = EstPremier(testVals(i))
+        message = message & "EstPremier(" & testVals(i) & ") = " & IIf(resultat, "Vrai", "Faux") & vbCrLf
+    Next i
+
+    MsgBox message, vbInformation, "Test Nombre Premier"
+End Sub
+
+================================================================================
+SECTION XV : Afficher nom feuille active
+================================================================================
+
+Sub_TestAfficherNomFeuilleActive()
+    ' Test de l'affichage du nom de la feuille active
+    MsgBox "Feuille de calcul active : " & ActiveSheet.Name, vbInformation
+End Sub
+
+Sub_TestCreerBoutonFeuille()
+    ' Création d'un bouton pour tester l'affichage
+    Dim btn As Button
+    Set btn = ActiveSheet.Buttons.Add( _
+        Left:=50, _
+        Width:=100, _
+        Top:=50, _
+        Height:=30)
+
+    btn.Caption = "Feuille active"
+    btn.OnAction = "AfficherNomFeuilleActive"
+End Sub
+
+================================================================================
+SECTION XVI : Effacer plage de données avec confirmation
+================================================================================
+
+Sub_TestEffacerPlage()
+    ' Test de l'effacement de plage avec confirmation
+    Dim debutRange As String
+    Dim finRange As String
+    Dim reponse As VbMsgBoxResult
+
+    debutRange = InputBox("Coordonnée de départ de la plage (ex: A1):")
+    finRange = InputBox("Coordonnée de fin de la plage (ex: B10):")
+
+    If debutRange <> "" And finRange <> "" Then
+        reponse = MsgBox "Voulez-vous vraiment effacer les données de la plage " & _
+                         debutRange & " : " & finRange & " ?", _
+                         vbYesNo + vbDefaultButton2, "Confirmation"
+
+        If reponse = vbYes Then
+            On Error Resume Next
+            Range(debutRange & ":" & finRange).ClearContents
+            On Error GoTo 0
+            MsgBox "Les données de la plage " & debutRange & " : " & finRange & " ont été effacées.", vbInformation
+        Else
+            MsgBox "Opération annulée. Aucune donnée n'a été effacée.", vbInformation
+        End If
+    End If
+End Sub
+
+================================================================================
+TP ASSISTÉS - MACROS DE TEST
+================================================================================
+
+Sub_TestCourbeGaussienne()
+    ' Test de génération de points selon courbe de Gauss
+    Dim i As Integer
+    Dim message As String
+    Dim mean As Double, stdDev As Double
+
+    mean = 0
+    stdDev = 1
+    message = "Exemple de génération de courbe de Gauss (moyenne=" & mean & ", écart-type=" & stdDev & ")" & vbCrLf & vbCrLf
+
+    For i = -3 To 3 Step 0.5
+        ' Formule de la courbe de Gauss: f(x) = (1/(σ√(2π))) * e^(-(x-μ)²/(2σ²))
+        Dim val As Double
+        val = (1 / (stdDev * Sqr(2 * 3.14159265358979))) * Exp(-((i - mean) ^ 2) / (2 * stdDev ^ 2))
+        message = message & "x=" & i & " => f(x)=" & Round(val, 4) & vbCrLf
+    Next i
+
+    MsgBox message, vbInformation, "Courbe de Gauss"
+End Sub
+
+Sub_TestCreationFormulaire()
+    ' Test de création d'un user form basique
+    MsgBox "Cette fonction teste la création de formulaires." & vbCrLf & _
+           "En VBA, utilisez l'éditeur UserForm pour créer des interfaces.", vbInformation
+End Sub
+
+Sub_TestQuestionsVBA()
+    ' Test de questions de révision VBA
+    Dim score As Integer
+    Dim reponses(1 To 5, 1 To 2) As String
+
+    reponses(1, 1) = "Quelle instruction sert à déclarer une variable?"
+    reponses(1, 2) = "Dim"
+
+    reponses(2, 1) = "Comment ajouter des bordures à une plage?"
+    reponses(2, 2) = "BorderAround"
+
+    reponses(3, 1) = "Comment appeler une procédure avec un paramètre optionnel?"
+    reponses(3, 2) = "Call maProcedure(r:=5)"
+
+    reponses(4, 1) = "Quelle fonction retourne le plus grand de deux nombres?"
+    reponses(4, 2) = "MaxDeuxNombres"
+
+    reponses(5, 1) = "Comment calculer la factorielle de manière récursive?"
+    reponses(5, 2) = "FactorielleRecursive(n-1)"
+
+    score = InputBox("Combien de réponses connaissez-vous ? (1-5)", "Questions VBA")
+
+    MsgBox "Score: " & score & "/5", vbInformation, "Questions VBA"
+End Sub
+
+================================================================================
+EXERCICES DU MANUEL "APPRENDS LE LANGAGE VBA"
+================================================================================
+
+Sub_TestExos36A56()
+    MsgBox "Exercices pages 36 à 56 du manuel Apprends le langage VBA", vbInformation
+End Sub
+
+Sub_TestExos57A76Formules()
+    MsgBox "Exercices pages 57 à 76 : Formules", vbInformation
+End Sub
+
+Sub_TestExos77A131Ventes()
+    MsgBox "Exercices pages 77 à 131 : Formule de gestion des ventes", vbInformation
+End Sub
+
+Sub_TestExos132A151Protection()
+    MsgBox "Exercices pages 132 à 151 : Protection du classeur", vbInformation
+End Sub
+
+Sub_TestExos152TableauCrois()
+    MsgBox "Exercice page 152 : Tableau croisé dynamique", vbInformation
+End Sub
+
+================================================================================
+BDI - GESTIONS COMPLÈTES
+================================================================================
+
+Sub_TestGestionFoot()
+    MsgBox "Gestion Foot (page BDI p 166)", vbInformation
+End Sub
+
+Sub_TestGestionAssociation()
+    MsgBox "Gestion Association (page BDI p 204)", vbInformation
+End Sub
+
+Sub_TestFacturation()
+    MsgBox "Facturation (page BDI p 96)", vbInformation
+End Sub
+
+================================================================================
+QCM VBA
+================================================================================
+
+Sub_TestQCM()
+    MsgBox "QCM page 176 - Questions à choix multiples sur VBA", vbInformation
+End Sub
+
+================================================================================
+FOOTER
+================================================================================
+
+Dernière mise à jour : 27 octobre 2026
+Fichier créé dans le cadre du TP Cours VBA
+Ce fichier contient des macros de test pour tous les sujets abordés en classe.
+
+Pour toute question ou problème avec les macros, référez-vous au documentation TP_VBA_Documentation.md
