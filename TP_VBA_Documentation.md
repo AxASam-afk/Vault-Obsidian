@@ -17,7 +17,6 @@
 14. [Section XIV : Fonction nombre premier](#xiv)
 15. [Section XV : Afficher nom feuille active](#xv)
 16. [Section XVI : Effacer plage de données avec confirmation](#xvi)
-- [TP Assistés](#tp-assistés)
 
 ---
 
