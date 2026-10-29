@@ -1,163 +1,182 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CV - Samuel Lepinay</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV - Samuel Lepinay</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<nav aria-label="Navigation principale">
-  <div class="wrap">
-    <a href="#accueil">Accueil</a>
-    <a href="#profil">Profil</a>
-    <a href="#formations">Formations</a>
-    <a href="#experiences">Expériences</a>
-    <a href="#competences">Compétences</a>
+  <nav id="navbar">
+    <a class="brand" href="#accueil">SL<span>.</span></a>
+
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="burger">☰</label>
+
+    <ul>
+      <li><a href="#accueil">Accueil</a></li>
+      <li><a href="#formations">Formations</a></li>
+      <li><a href="#experiences">Expériences</a></li>
+      <li><a href="#competences">Compétences</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="page">
+
+    <header id="accueil">
+      <div id="cards">
+        <div class="identite" >
+          <img src="photo.png" alt="Photo">
+          <h1>LEPINAY Samuel</h1>
+          <ul id="contact">
+            <li>Email : samuellepinay54@gmail.com</li>
+            <li>Téléphone : 06 29 86 73 87</li>
+            <li>Ville : Bram, Toulouse</li>
+            <li>Portfolio : <a href="https://porte-folio-sand.vercel.app/">porte-folio-sand.vercel.app</a></li>
+            <li>LinkedIn : <a href="https://www.linkedin.com/in/samuel-lepinay/">samuel-lepinay</a></li>
+          </ul>
+        </div>
+      
+
+        <div class="titre">
+          <h2>Alternant - Support IT, Systèmes &amp; Cybersécurité</h2>
+          <p class="info">Rythme d'alternance : 3 jours en entreprise / 2 jours en formation</p>
+          <p class="info">Disponibilité : immédiate</p>
+         <p>
+            Étudiant en cybersécurité, je développe des compétences en pentesting,
+            développement sécurisé et support SI à travers des projets concrets
+            (CTF, labs, applications sécurisées). Rigoureux et autonome, je cherche
+            à contribuer à des environnements exigeants tout en renforçant mes
+            compétences en sécurité appliquée.
+          </p>
+        </div>
+        
+      </div>
+    </header>
+
+    <main>
+
+      <div class="colonne-gauche">
+
+        <section id="cards" class="formation-section">
+          <h2>Formations</h2>
+
+          <article class="formation-card">
+            <h3>ESGI - École Supérieure de Génie Informatique</h3>
+            <p class="formation-date">09/2026 - 07/2029</p>
+            <p>Bachelor en Informatique, Systèmes &amp; Cybersécurité</p>
+            <ul>
+              <li>Objectif : poursuivre des études vers un Master en Cybersécurité</li>
+              <li>Compétences visées :
+                <ul>
+                  <li>Support informatique et administration des systèmes</li>
+                  <li>Réseaux et cybersécurité</li>
+                  <li>Maintenance informatique</li>
+                  <li>Environnements Windows/Linux</li>
+                  <li>Sécurité des systèmes et des infrastructures</li>
+                </ul>
+              </li>
+            </ul>
+          </article>
+
+          <article class="formation-card">
+            <h3>Lycée Raymond Naves</h3>
+            <p class="formation-date">2023 - 2024</p>
+            <p>Baccalauréat</p>
+          </article>
+        </section>
+
+        <section id="cards">
+          <h2>Expériences</h2>
+
+          <h3>ADERA - Stage Support SI (2 mois)</h3>
+          <p>05/2025 - 06/2025</p>
+          <ul>
+            <li>Prise en charge des demandes utilisateurs (support niveau 1/2) via système de tickets</li>
+            <li>Diagnostic et résolution d'incidents (postes de travail, accès, logiciels)</li>
+            <li>Participation à la maintenance du parc informatique (mises à jour, configurations, correctifs)</li>
+            <li>Sensibilisation aux bonnes pratiques (sécurité de base, hygiène numérique)</li>
+          </ul>
+
+          <h3>Casino Barrière - Croupier</h3>
+          <p>04/2024 - 10/2024</p>
+          <ul>
+            <li>Prise en charge des clients et gestion des demandes à la table de jeu avec professionnalisme et réactivité</li>
+            <li>Surveillance du bon déroulement des parties et résolution rapide des situations ou litiges mineurs</li>
+            <li>Participation à la gestion et au contrôle du matériel de jeu (jetons, cartes, roulettes) ainsi qu'au respect des procédures du casino</li>
+            <li>Sensibilisation des joueurs au règlement des jeux et application stricte des consignes de sécurité et de conformité du casino</li>
+          </ul>
+        </section>
+
+      </div>
+
+      <div class="colonne-droite">
+
+        <section id="cards">
+          <h2>Compétences techniques</h2>
+
+          <h3>Cybersécurité</h3>
+          <ul>
+            <li>Pentesting &amp; sécurité applicative</li>
+            <li>Analyse vulnérabilités</li>
+            <li>CTF &amp; writeups</li>
+            <li>Authentification sécurisée</li>
+            <li>OWASP &amp; bonnes pratiques</li>
+          </ul>
+
+          <h3>Développement</h3>
+          <ul>
+            <li>Python, Java</li>
+            <li>HTML / CSS</li>
+            <li>React, Next.js</li>
+            <li>Tailwind CSS</li>
+            <li>Développement web sécurisé</li>
+          </ul>
+
+          <h3>Réseaux &amp; Méthode</h3>
+          <ul>
+            <li>Réseau local</li>
+            <li>VPN &amp; Wi-Fi</li>
+            <li>Analyse &amp; résolution de problèmes</li>
+            <li>Documentation &amp; procédures</li>
+            <li>Veille techno</li>
+          </ul>
+        </section>
+
+        <section id="cards">
+          <h2>Soft skills</h2>
+          <ul>
+            <li>Esprit d'analyse</li>
+            <li>Curiosité technique</li>
+            <li>Capacité d'apprentissage rapide</li>
+            <li>Travail en équipe</li>
+          </ul>
+        </section>
+
+        <section id="cards">
+          <h2>Langues</h2>
+          <ul>
+            <li>Anglais : intermédiaire</li>
+            <li>Espagnol : débutant</li>
+          </ul>
+        </section>
+
+        <section id="loisirs">
+          <h2>Loisirs</h2>
+          <ul>
+            <li>Cybersécurité (CTF, veille, challenges techniques)</li>
+            <li>Développement de projets personnels (web, outils, sécurité)</li>
+            <li>Jeux vidéo (logique, stratégie, résolution de problèmes)</li>
+          </ul>
+        </section>
+
+      </div>
+
+    </main>
+
   </div>
-</nav>
 
-<header class="hero" id="accueil">
-  <div class="wrap">
-    <div class="term" role="img" aria-label="Terminal : LEPINAY Samuel, Alternant - Support IT & Cybersécurité">
-      <div class="term-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="term-title">samuel@cv: ~</span></div>
-      <div class="term-body" id="term">
-        <div class="l cmd"><span class="prompt">$</span> <span class="t">whoami</span></div>
-        <div class="l out big">LEPINAY Samuel</div>
-        <div class="l cmd"><span class="prompt">$</span> <span class="t">cat role.txt</span></div>
-        <div class="l out">Alternant - Support IT &amp; Cybersécurité</div>
-        <div class="l"><span class="prompt">$</span> <span class="cursor" aria-hidden="true"></span></div>
-      </div>
-    </div>
-    <div class="cta">
-      <a class="btn solid" href="#formations">Voir formations</a>
-    </div>
-  </div>
-</header>
-
-<main class="wrap">
-
-  <section id="profil">
-    <h2><span class="prompt">$</span> À propos</h2>
-    <p>Étudiant en cybersécurité, je développe des compétences en pentesting, développement sécurisé et support SI à travers des projets concrets (CTF, labs, applications sécurisées). Rigoureux et autonome, je cherche à contribuer à des environnements exigeants tout en renforçant mes compétences en sécurité appliquée.</p>
-    <a class="btn" href="https://porte-folio-sand.vercel.app/" target="_blank" rel="noopener">Portfolio ↗</a>
-  </section>
-
-  <section id="formations">
-    <h2><span class="prompt">$</span> Formation</h2>
-    <div class="tl">
-      <div class="item">
-        <h3>ESGI - École Supérieure de Génie Informatique</h3>
-        <div class="meta">Bachelor en Informatique, Systèmes &amp; Cybersécurité (09/2026 – 07/2029)</div>
-        <ul>
-          <li>Objectif : Master en Cybersécurité</li>
-          <li>Compétences : Support informatique, administration des systèmes, Réseaux et cybersécurité, Maintenance informatique, Environnements Windows/Linux, Sécurité des systèmes et infrastructures</li>
-        </ul>
-      </div>
-      <div class="item past">
-        <h3>Lycée Raymond Naves</h3>
-        <div class="meta">Baccalauréat (2023 – 2024)</div>
-      </div>
-    </div>
-  </section>
-
-  <section id="experiences">
-    <h2><span class="prompt">$</span> Expériences</h2>
-    <div class="tl">
-      <div class="item">
-        <h3>ADERA - Stage Support SI (2 mois)</h3>
-        <div class="meta">05/2025 – 06/2025</div>
-        <ul>
-          <li>Prise en charge demandes utilisateurs (support niveau 1/2) via système de tickets</li>
-          <li>Diagnostic et résolution d'incidents (postes de travail, accès, logiciels)</li>
-          <li>Participation à la maintenance du parc informatique (mises à jour, configurations, correctifs)</li>
-          <li>Sensibilisation aux bonnes pratiques (sécurité de base, hygiène numérique)</li>
-        </ul>
-      </div>
-      <div class="item past">
-        <h3>Casino Barrière - Croupier</h3>
-        <div class="meta">04/2024 – 10/2024</div>
-        <ul>
-          <li>Prise en charge des clients et gestion des demandes à la table de jeu avec professionnalisme et réactivité</li>
-          <li>Surveillance du bon déroulement des parties et résolution rapide des situations ou litiges mineurs</li>
-          <li>Participation à la gestion et au contrôle du matériel de jeu (jetons, cartes, roulettes) ainsi qu'au respect des procédures du casino</li>
-          <li>Sensibilisation des joueurs au règlement des jeux et application stricte des consignes de sécurité et de conformité du casino</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section id="competences">
-    <h2><span class="prompt">$</span> Compétences techniques</h2>
-    <div class="grid">
-      <div class="box">
-        <h3>Cybersécurité</h3>
-        <div class="tags">
-          <span class="tag">Pentesting &amp; sécurité applicative</span>
-          <span class="tag">Analyse vulnérabilités</span>
-          <span class="tag">CTF &amp; writeups</span>
-          <span class="tag">Authentification sécurisée</span>
-          <span class="tag">OWASP &amp; bonnes pratiques</span>
-        </div>
-      </div>
-      <div class="box">
-        <h3>Développement</h3>
-        <div class="tags">
-          <span class="tag">Python, Java</span>
-          <span class="tag">HTML / CSS</span>
-          <span class="tag">React, Next.js</span>
-          <span class="tag">Tailwind CSS</span>
-          <span class="tag">Développement web sécurisé</span>
-        </div>
-      </div>
-      <div class="box">
-        <h3>Réseaux &amp; Méthode</h3>
-        <div class="tags">
-          <span class="tag">Réseau local</span>
-          <span class="tag">VPN &amp; Wi‑Fi</span>
-          <span class="tag">Analyse &amp; résolution de problèmes</span>
-          <span class="tag">Documentation &amp; procédures</span>
-          <span class="tag">Veille techno</span>
-        </div>
-      </div>
-      <div class="box">
-        <h3>Soft skills</h3>
-        <div class="tags">
-          <span class="tag">Esprit d'analyse</span>
-          <span class="tag">Curiosité technique</span>
-          <span class="tag">Capacité d'apprentissage rapide</span>
-          <span class="tag">Travail en équipe</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-</main>
-
-<script>
-/* Frappe du terminal : le contenu est déjà dans le HTML, le script ne fait que le rejouer. */
-(function(){
-  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  var lines = Array.prototype.slice.call(document.querySelectorAll('#term .l'));
-  var sleep = function(ms){ return new Promise(function(r){ setTimeout(r, ms); }); };
-  lines.forEach(function(l){ l.hidden = true; });
-  (async function(){
-    for (var i = 0; i < lines.length; i++) {
-      var l = lines[i];
-      l.hidden = false;
-      var t = l.querySelector('.t');
-      if (t) {
-        var txt = t.textContent; t.textContent = '';
-        for (var c = 0; c < txt.length; c++) { t.textContent += txt[c]; await sleep(55); }
-        await sleep(220);
-      } else { await sleep(160); }
-    }
-  })();
-})();
-</script>
 </body>
 </html>
