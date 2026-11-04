@@ -279,6 +279,10 @@ resultat = calculer_somme(mes_notes)
 print("La somme totale est", resultat)
 ```
 
+
+
+
+💡 sorted(nombres) ou nombres.sort()
 ---
 
 ## Récapitulatif
